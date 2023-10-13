@@ -5,6 +5,9 @@ TagManager:
   serializedVersion: 2
   tags:
   - Gloves
+  - WeaponSwitch
+  - GlovesWeapon
+  - KatanaWeapon
   layers:
   - Default
   - TransparentFX
