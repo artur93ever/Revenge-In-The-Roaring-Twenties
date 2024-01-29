@@ -2335,6 +2335,23 @@ MonoBehaviour:
       m_Action: Attack
       m_Flags: 0
     m_Flags: 0
+  shootAction:
+    m_Name: Shoot
+    m_Type: 0
+    m_ExpectedControlType: 
+    m_Id: b4c360a9-7de8-4894-adf3-dcbe4a99cc47
+    m_Processors: 
+    m_Interactions: 
+    m_SingletonActionBindings:
+    - m_Name: 
+      m_Id: d4d4727c-3edb-42b4-b576-00af4240825d
+      m_Path: <Mouse>/leftButton
+      m_Interactions: Hold
+      m_Processors: 
+      m_Groups: 
+      m_Action: Shoot
+      m_Flags: 0
+    m_Flags: 0
   playerHealth: {fileID: 1563779966}
 --- !u!114 &1563779964
 MonoBehaviour:
@@ -2458,6 +2475,22 @@ MonoBehaviour:
         m_CallState: 2
     m_ActionId: ce0ed5c6-3484-4475-9c18-e68e3adae27c
     m_ActionName: Player/Interact[/Keyboard/space]
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1563779963}
+        m_TargetAssemblyTypeName: PlayerController, Assembly-CSharp
+        m_MethodName: OnShoot
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: c4a3050e-e9a5-447e-bbb3-cf8a369f24df
+    m_ActionName: Player/Shoot[/Mouse/leftButton]
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: 
   m_DefaultActionMap: Player

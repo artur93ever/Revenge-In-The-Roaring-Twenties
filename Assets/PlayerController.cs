@@ -38,6 +38,9 @@ public class PlayerController : MonoBehaviour
     public float attacktime;
     public InputAction attackAction;
 
+    [Header("Shoot")]
+    public InputAction shootAction;
+
     [Header("References")]
     public Health playerHealth; // Reference to the Health script
 
@@ -76,6 +79,14 @@ public class PlayerController : MonoBehaviour
         }
     }
 
+    public void OnShoot(InputAction.CallbackContext context)
+    {
+        if (context.started)
+        {
+            UnityEngine.Debug.Log("Shoot");
+        }
+    }
+
     // Start is called before the first frame update
     void Start()
     {
@@ -84,6 +95,8 @@ public class PlayerController : MonoBehaviour
 
         attackAction.performed += OnAttack;
         attackAction.Enable();
+
+        shootAction.Enable();
 
         LguanteAnimator = guanteL.GetComponent<Animator>();
         RguanteAnimator = guanteR.GetComponent<Animator>();
